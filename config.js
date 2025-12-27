@@ -17,8 +17,8 @@ const DEBUG = convertToBool(process.env.DEBUG, 'true');
 
 module.exports = {
   VERSION: 'v4.4.6',
-  SESSION_ID: process.env.SESSION_ID || '',
-  MODE: (process.env.MODE || 'private').toLowerCase(),
+  SESSION_ID: process.env.SESSION_ID || 'HP_2025_DEC_27_BMB0EN',
+  MODE: (process.env.MODE || 'public').toLowerCase(),
   HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
   SEND_READ: toBool(process.env.READ_COMMAND),
   READ_MSG: toBool(process.env.READ_MSG),
@@ -44,7 +44,7 @@ module.exports = {
   TERMUX_VPS: toBool(process.env.TERMUX || process.env.VPS),
   AUTO_STATUS_VIEW: toBool(process.env.AUTO_STATUS_VIEW),
   APIKEY: process.env.APIKEY || 'free',
-  AUTH_FILE: process.env.AUTH_FILE || false,
+  AUTH_FILE: process.env.AUTH_FILE || 'true',
   START_MSG: toBool(process.env.START_MSG || 'true'),
   DATABASE_URL: DATABASE_URL,
   DATABASE: DATABASE_URL === "./database.db"
@@ -70,4 +70,5 @@ module.exports = {
   BRAIN_ID: process.env.BRAIN_ID || 'bid=168613&key=EfbnX54Iy9PFIFp3',
   SUDO: process.env.SUDO || '0,0',
   DEBUG: DEBUG
+
 };
